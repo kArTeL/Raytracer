@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2807DE521BAD1DD1006FDA7C /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2807DE501BAD1DD1006FDA7C /* Camera.cpp */; settings = {ASSET_TAGS = (); }; };
+		2807DE551BAD3206006FDA7C /* Intersection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2807DE531BAD3206006FDA7C /* Intersection.cpp */; settings = {ASSET_TAGS = (); }; };
+		2807DE5A1BAD3644006FDA7C /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2807DE581BAD3644006FDA7C /* Sphere.cpp */; settings = {ASSET_TAGS = (); }; };
+		2807DE5D1BAD3D02006FDA7C /* Raytracer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2807DE5B1BAD3D02006FDA7C /* Raytracer.cpp */; settings = {ASSET_TAGS = (); }; };
+		281B505E1BAD110C004C8C3A /* Ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 281B505C1BAD110C004C8C3A /* Ray.cpp */; settings = {ASSET_TAGS = (); }; };
 		28258DEC1BAD0BCF00D5D360 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28258DEB1BAD0BCF00D5D360 /* main.cpp */; };
+		28258DF91BAD0BF000D5D360 /* color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28258DF31BAD0BF000D5D360 /* color.cpp */; settings = {ASSET_TAGS = (); }; };
+		28258DFB1BAD0BF000D5D360 /* RTMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28258DF71BAD0BF000D5D360 /* RTMath.cpp */; settings = {ASSET_TAGS = (); }; };
+		28258DFD1BAD0D4100D5D360 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28258DFC1BAD0D4100D5D360 /* GLUT.framework */; };
+		28258DFF1BAD0D7D00D5D360 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28258DFE1BAD0D7D00D5D360 /* OpenGL.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +32,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2807DE501BAD1DD1006FDA7C /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		2807DE511BAD1DD1006FDA7C /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		2807DE531BAD3206006FDA7C /* Intersection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Intersection.cpp; sourceTree = "<group>"; };
+		2807DE541BAD3206006FDA7C /* Intersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Intersection.h; sourceTree = "<group>"; };
+		2807DE581BAD3644006FDA7C /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = "<group>"; };
+		2807DE591BAD3644006FDA7C /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		2807DE5B1BAD3D02006FDA7C /* Raytracer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Raytracer.cpp; sourceTree = "<group>"; };
+		2807DE5C1BAD3D02006FDA7C /* Raytracer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Raytracer.h; sourceTree = "<group>"; };
+		281B505C1BAD110C004C8C3A /* Ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Ray.cpp; path = ../Ray.cpp; sourceTree = "<group>"; };
+		281B505D1BAD110C004C8C3A /* Ray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ray.h; path = ../Ray.h; sourceTree = "<group>"; };
 		28258DE81BAD0BCF00D5D360 /* WhittedRaytracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WhittedRaytracer; sourceTree = BUILT_PRODUCTS_DIR; };
 		28258DEB1BAD0BCF00D5D360 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		28258DF31BAD0BF000D5D360 /* color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = color.cpp; sourceTree = "<group>"; };
+		28258DF41BAD0BF000D5D360 /* color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color.h; sourceTree = "<group>"; };
+		28258DF51BAD0BF000D5D360 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
+		28258DF71BAD0BF000D5D360 /* RTMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RTMath.cpp; sourceTree = "<group>"; };
+		28258DF81BAD0BF000D5D360 /* RTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMath.h; sourceTree = "<group>"; };
+		28258DFC1BAD0D4100D5D360 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		28258DFE1BAD0D7D00D5D360 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,15 +58,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28258DFF1BAD0D7D00D5D360 /* OpenGL.framework in Frameworks */,
+				28258DFD1BAD0D4100D5D360 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2807DE571BAD3639006FDA7C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2807DE581BAD3644006FDA7C /* Sphere.cpp */,
+				2807DE591BAD3644006FDA7C /* Sphere.h */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		28258DDF1BAD0BCF00D5D360 = {
 			isa = PBXGroup;
 			children = (
+				28258DFE1BAD0D7D00D5D360 /* OpenGL.framework */,
+				28258DFC1BAD0D4100D5D360 /* GLUT.framework */,
 				28258DEA1BAD0BCF00D5D360 /* WhittedRaytracer */,
 				28258DE91BAD0BCF00D5D360 /* Products */,
 			);
@@ -57,9 +96,31 @@
 		28258DEA1BAD0BCF00D5D360 /* WhittedRaytracer */ = {
 			isa = PBXGroup;
 			children = (
+				2807DE571BAD3639006FDA7C /* Objects */,
+				28258DF21BAD0BF000D5D360 /* RTArchive */,
 				28258DEB1BAD0BCF00D5D360 /* main.cpp */,
+				2807DE5B1BAD3D02006FDA7C /* Raytracer.cpp */,
+				2807DE5C1BAD3D02006FDA7C /* Raytracer.h */,
 			);
 			path = WhittedRaytracer;
+			sourceTree = "<group>";
+		};
+		28258DF21BAD0BF000D5D360 /* RTArchive */ = {
+			isa = PBXGroup;
+			children = (
+				28258DF31BAD0BF000D5D360 /* color.cpp */,
+				28258DF41BAD0BF000D5D360 /* color.h */,
+				28258DF51BAD0BF000D5D360 /* defines.h */,
+				28258DF71BAD0BF000D5D360 /* RTMath.cpp */,
+				28258DF81BAD0BF000D5D360 /* RTMath.h */,
+				281B505C1BAD110C004C8C3A /* Ray.cpp */,
+				281B505D1BAD110C004C8C3A /* Ray.h */,
+				2807DE501BAD1DD1006FDA7C /* Camera.cpp */,
+				2807DE511BAD1DD1006FDA7C /* Camera.h */,
+				2807DE531BAD3206006FDA7C /* Intersection.cpp */,
+				2807DE541BAD3206006FDA7C /* Intersection.h */,
+			);
+			path = RTArchive;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2807DE551BAD3206006FDA7C /* Intersection.cpp in Sources */,
+				281B505E1BAD110C004C8C3A /* Ray.cpp in Sources */,
 				28258DEC1BAD0BCF00D5D360 /* main.cpp in Sources */,
+				2807DE5D1BAD3D02006FDA7C /* Raytracer.cpp in Sources */,
+				2807DE521BAD1DD1006FDA7C /* Camera.cpp in Sources */,
+				2807DE5A1BAD3644006FDA7C /* Sphere.cpp in Sources */,
+				28258DF91BAD0BF000D5D360 /* color.cpp in Sources */,
+				28258DFB1BAD0BF000D5D360 /* RTMath.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -196,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -235,6 +303,7 @@
 				28258DF11BAD0BCF00D5D360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
