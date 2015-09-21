@@ -216,7 +216,10 @@ public:
 	float length2() const { return x*x+y*y+z*z; }
 
 	/// Normalize vector to unit length.
-	Vector3D& normalize() { float l=1.0f/length(); x*=l; y*=l; z*=l; return *this; }
+	Vector3D& normalize() {
+        float l=1.0f/length();
+        x*=l; y*=l; z*=l;
+        return *this; }
 	
 	/// Write elements to an output stream.
 	friend std::ostream& operator<<(std::ostream& os, const Vector3D& A);

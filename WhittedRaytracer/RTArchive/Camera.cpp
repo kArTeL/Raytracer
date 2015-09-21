@@ -39,7 +39,8 @@ Ray Camera::getRay(float x, float y) const {
     Vector3D right  = 2.0f/(float)(H_SIZE) * mImageExtentX * mRight;
     Vector3D up     = -2.0f/(float)(V_SIZE) * mImageExtentY * mUp;
     Vector3D view   = mForward - mImageExtentX * mRight + mImageExtentY * mUp;
-    Vector3D d      = view + x*right + y*up; float dLength = d.length();
+    Vector3D d      = view + x*right + y*up;
+    float dLength = d.length();
     d /= dLength;
     return Ray(mOrigin, d, mNearPlane, mFarPlane);
 }

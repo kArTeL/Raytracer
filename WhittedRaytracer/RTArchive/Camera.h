@@ -45,7 +45,7 @@ private:
     
 public:
     ///Set camera to look at a specific area.
-    void setLookAt(const Point3D& pos, const Point3D& target, const Vector3D& up, float fov, float near, float far);
+    void setLookAt(const Point3D& pos, const Point3D& target, const Vector3D& up, float fov, float near=1.0f, float far=100.0f);
     
     ///Determ the ray passing through the point (x,y)
     Ray getRay(float x, float y) const;

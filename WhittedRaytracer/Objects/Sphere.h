@@ -31,7 +31,7 @@ public:
     
     bool intersect(const Ray& ray) const;
     
-    bool intersect(const Ray& ray, Intersection intersection) const;
+    bool intersect(const Ray& ray, Intersection& intersection) const;
 };
 
 #endif /* Sphere_h */

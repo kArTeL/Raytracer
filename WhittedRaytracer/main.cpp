@@ -23,7 +23,9 @@
 
 #include "defines.h"
 #include "Raytracer.h"
-
+#include "Sphere.h"
+#include "Color.h"
+#include "Camera.h"
 
 Color **buffer;
 
@@ -63,18 +65,31 @@ void initializeCanvas()
 
 void startRaytracer()
 {
-   // Sphere sphere =  Sphere();
-    //Raytracer rayTracer = Raytracer()
-    //rayTracer.draw_scene()
-    int i, j;
-    for ( i = 0; i < H_SIZE; i++ ) {
-        for ( j = 0; j < V_SIZE; j++ ) {
-            if ( i == j ) {
-                buffer[i][j] = Color( 1, 1, 1 );
-                buffer[H_SIZE - i - 1][ j ] = Color( 1, 1, 1 );
-            }
-        }
-    }
+    Sphere sphere =  Sphere(20);
+    Camera camera = Camera();
+    Point3D origin = Point3D(100, 100, 0);
+    Point3D target = Point3D(140, 140, 1);
+    
+    camera.setLookAt(origin, target, origin,30.0f);
+        //camera.mOrigin = origin;
+    Raytracer rayTracer = Raytracer(buffer, &camera,&sphere);
+    
+    rayTracer.computeImage();
+//
+    
+    
+    
+    
+    
+//    int i, j;
+//    for ( i = 0; i < H_SIZE; i++ ) {
+//        for ( j = 0; j < V_SIZE; j++ ) {
+//            if ( i == j ) {
+//                buffer[i][j] = Color( 1, 1, 1 );
+//                buffer[H_SIZE - i - 1][ j ] = Color( 1, 1, 1 );
+//            }
+//        }
+//    }
 }
 
 

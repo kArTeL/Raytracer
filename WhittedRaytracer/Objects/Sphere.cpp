@@ -39,6 +39,6 @@ bool Sphere::intersect(const Ray& ray) const {
     
 }
 
-bool Sphere::intersect(const Ray& ray, Intersection intersection) const {
+bool Sphere::intersect(const Ray& ray, Intersection& intersection) const {
     return true;
 }
