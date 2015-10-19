@@ -27,6 +27,10 @@
 #include "Color.h"
 #include "Camera.h"
 
+#include "Diffuse.h"
+#include "PointLight.h"
+
+
 Color **buffer;
 
 
@@ -65,16 +69,40 @@ void initializeCanvas()
 
 void startRaytracer()
 {
-    Sphere sphere =  Sphere(20);
-    Camera camera = Camera();
-    Point3D origin = Point3D(100, 100, 0);
-    Point3D target = Point3D(140, 140, 1);
+    Color color = Color(1, 0, 0);
     
-    camera.setLookAt(origin, target, origin,30.0f);
-        //camera.mOrigin = origin;
-    Raytracer rayTracer = Raytracer(buffer, &camera,&sphere);
+    Color lightColor = Color(1, 1, 1);
     
-    rayTracer.computeImage();
+    
+    Diffuse* material = new Diffuse(color);
+    
+    Point3D lightPosition = Point3D(0, 0, -10);
+    
+    PointLight* pointLight = new PointLight(lightPosition,lightColor,0.2f);
+    
+    Camera cam;
+    Sphere scenario( 15,material );
+    
+    scenario.translate( Vector3D( 0, 0, 50 ) );
+    //scenario.scale( Vector3D( -0.5, -0.5, -0.5 ) );
+    
+    cam.setLookAt(Point3D(0.0f, 0.0f, -100.0f), Point3D(0.0f, 0.0f, 0.0f), Vector3D( 0.0f, 1.0f,
+                                                                                    0.0f), 52);
+    
+    Raytracer rt( buffer, &cam, &scenario,pointLight );
+    
+    rt.computeImage();
+    
+//    Sphere sphere =  Sphere(20);
+//    Camera camera = Camera();
+//    Point3D origin = Point3D(100, 100, 0);
+//    Point3D target = Point3D(140, 140, 1);
+//    
+//    camera.setLookAt(origin, target, origin,30.0f);
+//        //camera.mOrigin = origin;
+//    Raytracer rayTracer = Raytracer(buffer, &camera,&sphere);
+//    
+//    rayTracer.computeImage();
 //
     
     

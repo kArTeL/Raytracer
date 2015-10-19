@@ -16,6 +16,7 @@
 ///Class to represent a Ray
 class Ray {
     
+public:
     ///Origin point.
     Point3D  mOrg;
     
@@ -23,7 +24,7 @@ class Ray {
     Vector3D mDir;
     
     ///Minimum value that can be T.
-    float mMintT = 0;
+    float mMinT = 0;
     
     ///Maximum value that can be T.
     float mMaxT  = INF;
@@ -47,7 +48,7 @@ public :
     Ray(Point3D origin, Vector3D direction, float minT, float maxT ) {
         mOrg    = origin;
         mDir    = direction;
-        mMintT  = minT;
+        mMinT  = minT;
         mMaxT   = maxT;
         
     }

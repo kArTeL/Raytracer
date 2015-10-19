@@ -14,10 +14,13 @@
 #include "Camera.h"
 #include "Sphere.h"
 
+class PointLight;
+
 class Raytracer {
     
 private:
     
+    PointLight *mLight;
     Color **mImage;
     Sphere *mScene;
     Camera *mCamera;
@@ -26,7 +29,7 @@ private:
     Color trace(const Ray& ray, int depth);
     
 public:
-    Raytracer(Color **img, Camera *cam,Sphere *scenario );
+    Raytracer(Color **img, Camera *cam,Sphere *scenario,PointLight* light );
     void computeImage();
     
    

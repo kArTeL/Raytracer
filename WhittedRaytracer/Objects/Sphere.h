@@ -10,28 +10,36 @@
 #define Sphere_h
 
 #include <stdio.h>
-#include "Ray.h"
-#include "RTMath.h"
-#include "Intersection.h"
+#include "Primitive.h"
 
-class Sphere {
+class Material;
+
+class Sphere :public Primitive{
 
 public: 
     float mRadius;
-
+    Material *mMaterial; ///< Color and Material (Sphere)
     Sphere() {
         mRadius = 5;
     }
     
-    Sphere(float radius) {
+    Sphere(float radius, Material* material) {
         mRadius = radius;
+        mMaterial = material;
     }
+    
+    virtual ~Sphere();
+    
 
-    bool solveQuadratic(float A, float B, float C, float& t0, float& t1) const;
+    void setRadius(float r);
     
-    bool intersect(const Ray& ray) const;
+    virtual bool intersect(const Ray& ray);
+    virtual bool intersect(const Ray& ray, Intersection& isect);
     
-    bool intersect(const Ray& ray, Intersection& intersection) const;
+    protected:
+    bool solveQuadratic(float A, float B, float C, float& t0, float& t1);
+    
+
 };
 
 #endif /* Sphere_h */

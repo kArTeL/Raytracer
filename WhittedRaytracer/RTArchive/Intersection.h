@@ -13,6 +13,9 @@
 #include "Ray.h"
 #include "RTMath.h"
 
+class Material;
+class Primitive;
+
 ///Intersection struct, is struct because we need access to all the properties, and it is not referency, it's a copy of each variable.
 struct Intersection {
     
@@ -31,6 +34,9 @@ struct Intersection {
     Vector3D mView;
     
     float mT;
+    
+    Material *mMaterial; ///< Object's material
+    Primitive *mPrimitive; ///< Reference to intersected primitive.
 };
 
 

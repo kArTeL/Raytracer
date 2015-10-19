@@ -8,11 +8,14 @@
 
 #include "Raytracer.h"
 #include "Defines.h"
+#include "PointLight.h"
+#include "Material.h"
 
-Raytracer::Raytracer(Color **img, Camera *cam,Sphere *scenario ) {
+Raytracer::Raytracer(Color **img, Camera *cam,Sphere *scenario,PointLight* light  ) {
     mImage = img;
     mCamera = cam;
-    mScene = scenario;;
+    mScene = scenario;
+    mLight = light;
 }
 
 void Raytracer::computeImage() {
@@ -47,8 +50,13 @@ Color Raytracer::tracePixel(int x, int y) {
 }
 
 Color Raytracer::trace(const Ray& ray, int depth) {
-    if (mScene->intersect(ray)) {
-        return Color(1,1,1);
-    } else {
-        return Color(0,0,0); }
+    Intersection i;
+    if (mScene->intersect(ray, i)) {
+        Vector3D light = i.mPosition - this->mLight->getPosition();
+        light.normalize();
+        return i.mMaterial->evalBRDF( i, light );
+    }
+    else {
+        return Color(0,0,0); // Background color
+    }
 }
