@@ -85,6 +85,7 @@
 				2833BCBC1BD4C52100FDDB32 /* Diffuse.cpp */,
 				2807DE581BAD3644006FDA7C /* Sphere.cpp */,
 				2807DE591BAD3644006FDA7C /* Sphere.h */,
+				28258DF21BAD0BF000D5D360 /* RTArchive */,
 				2833BCB21BD4A6C400FDDB32 /* Primitive.cpp */,
 				2833BCB31BD4A6C400FDDB32 /* Primitive.h */,
 				2833BCB91BD4C3B400FDDB32 /* PointLight.cpp */,
@@ -116,7 +117,6 @@
 			children = (
 				2833BCB51BD4B04200FDDB32 /* Material */,
 				2807DE571BAD3639006FDA7C /* Objects */,
-				28258DF21BAD0BF000D5D360 /* RTArchive */,
 				28258DEB1BAD0BCF00D5D360 /* main.cpp */,
 				2807DE5B1BAD3D02006FDA7C /* Raytracer.cpp */,
 				2807DE5C1BAD3D02006FDA7C /* Raytracer.h */,
@@ -139,7 +139,8 @@
 				2807DE531BAD3206006FDA7C /* Intersection.cpp */,
 				2807DE541BAD3206006FDA7C /* Intersection.h */,
 			);
-			path = RTArchive;
+			name = RTArchive;
+			path = ../RTArchive;
 			sourceTree = "<group>";
 		};
 		2833BCB51BD4B04200FDDB32 /* Material */ = {

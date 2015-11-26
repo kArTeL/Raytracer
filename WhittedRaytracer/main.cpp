@@ -71,14 +71,14 @@ void startRaytracer()
 {
     Color color = Color(1, 0, 0);
     
-    Color lightColor = Color(1, 1, 1);
+    Color lightColor = Color(0, 0, 0);
     
     
     Diffuse* material = new Diffuse(color);
     
-    Point3D lightPosition = Point3D(0, 0, -10);
+    Point3D lightPosition = Point3D(0, -10, -10);
     
-    PointLight* pointLight = new PointLight(lightPosition,lightColor,0.2f);
+    PointLight* pointLight = new PointLight(lightPosition,lightColor,1.0f);
     
     Camera cam;
     Sphere scenario( 15,material );
